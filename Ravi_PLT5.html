@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+            width: 100px;
+            background:red;
+            font-size: larger; 
+            font-style: calc();   
+        }
+    </style>
+    <script>
+        function sal()
+        {
+        var basic,ta,da,hra,pf,net;
+        basic=document.getElementById("s").value;
+        
+        ta=basic*15/100;
+        da=basic*20/100;
+        hra=basic*50/100;
+        pf=basic*8/100;
+        net=parseInt(basic)+parseInt(ta)+parseInt(da)+parseInt(hra)-parseInt(pf)
+        document.getElementById("ta").value=ta;
+        document.getElementById("da").value=da;
+        document.getElementById("hra").value=hra;
+        document.getElementById("pf").value=pf;
+        document.getElementById("net").value=net;
+        }
+        function prt()
+        {
+            window.print();
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <b>Enter Name:<input type="text" id="n"><br><br>
+    Enter basic salary:<input type="text" id="s" onblur="sal()"><br><br>
+    
+    <b>ta:<input type="text" id="ta" readonly><br><br>
+    da:<input type="text" id="da" readonly><br><br>
+    hra:<input type="text" id="hra" readonly><br><br>
+    pf:<input type="text" id="pf" readonly><br><br>
+    net:<input type="text" id="net" readonly><br>
+    <br>
+    <button onclick="prt">Print</button></b>
+
+
+</body>
+
+</html>

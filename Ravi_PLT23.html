@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        var n=800,num=0;
+        var j=0,count=0;
+        var l=prompt("Enter the limit");
+        for(var i=0;i<l;i++){
+            n=n+(2*i);
+            document.write(n+" ");
+            var sum=0,h;
+            num=n;
+
+            while(num>0){
+                
+                j=num%10;
+                num=Math.floor(num/10);
+                sum=(sum+j);  
+               
+            }
+            document.writeln(sum+" ");
+            document.writeln("<br/>");
+            while(sum>0)
+            {
+                h=sum%10;
+                sum=Math.floor(sum/10);
+                if(h==1)
+                {
+                    count++;
+                }
+            }
+
+            
+             
+
+        }document.write("sum of the digits :- "+count);
+      
+      
+       
+    </script>
+</body>
+</html>

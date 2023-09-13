@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function items(n, a)
+        {
+     
+           
+            a.sort(function(a, b){return a - b});
+     
+            
+            let z = a[n - 1];
+     
+            
+            let x = 1;
+     
+          
+            let s = 0;
+            for (let i = 0; i < n - 1; i++)
+            {
+                s += a[i];
+     
+               
+                if (s <= z)
+                    x += 1;
+                else
+                    break;
+            }
+            return x;
+        }
+         
+        let n = 5;
+        let a = [5, 3, 1, 5, 6];
+        document.write(items(n, a));
+         
+    </script>
+</body>
+</html>

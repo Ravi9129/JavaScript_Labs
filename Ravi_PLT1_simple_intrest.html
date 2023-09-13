@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Intrest</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="number" name="a" id="first" placeholder="Enter Principal" </td>
+        </tr>
+        <tr>
+            <td> <input type="number" name="b" id="second" placeholder="Enter time period(year) "/> </td>
+            </tr>
+            <br>
+
+            <tr>
+            <td> <input type="number" name="c" id="third" placeholder="Enter rate of interest(%)"/> </td>
+            </tr>
+
+            <br>
+
+            <tr>
+            <td> <button onclick = "simple_interest()" >Submit</button> </td>
+            </tr>
+
+    </table>
+    <div id="num"> </div>
+
+</body>
+<script type="text/javascript">
+    function simple_interest()
+    {
+    var p,t,r,si,ci;
+    p = document.getElementById ("first").value;
+    t = document.getElementById ("second").value;
+    r = document.getElementById ("third").value;
+    si = parseInt((p*t*r)/100 );
+    amount = p*Math.pow((1 +r/100),t );
+    
+    document.getElementById ('num').innerHTML ="Simple interest : "+si;
+    
+    }
+    </script>
+</html>

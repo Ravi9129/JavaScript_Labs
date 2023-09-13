@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i, count = 100,num=0,j=0;
+
+        for (i = 1; i <= count; i++) {
+            Number = Math.floor((Math.random() * 100) + 1);
+            document.write(Number + " ");
+
+            while(Number>0){
+                num=Number%10;
+            
+                Number=Math.floor(Number/10);
+                if(num==9){
+                    j=j+1;
+
+                }
+                
+                
+               
+            }
+        }document.write(j);
+        // const min=parseInt(prompt("Enter a min value: "));
+        // const max=parseInt(prompt("Enter a min value: "));
+        // const a = Math.floor((Math.random() * max-min+1) + min);
+        //     document.write('random value between min and max is');
+             
+        
+    </script>
+</body>
+
+</html>
